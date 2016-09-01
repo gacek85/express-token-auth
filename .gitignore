@@ -1,0 +1,23 @@
+.DS_Store
+.vagrant
+Berksfile.lock
+nbproject
+config.json
+!test/config.json
+.idea
+locales/*
+
+# sessions
+.sessions
+
+.cookbooks
+build/chef/nodes
+
+# common ignores
+node_modules
+log/*
+!log/.gitkeep
+npm-debug.log
+
+# generated test coverage
+coverage.html

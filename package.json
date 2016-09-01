@@ -1,0 +1,47 @@
+{
+  "version": "0.0.1",
+  "description": "Express JS simple, token based, authorization middleware",
+  "license": "MIT",
+  "name": "auth-token",
+  "repository": "gacek85/express-token-auth",
+  "private": false,
+  "tags": [
+    "express",
+    "middleware",
+    "authorization",
+    "token"
+  ],
+  "engines": {
+    "node" : ">= 4.9"
+  },
+  "scripts": {
+    "test": "env env=test mocha --recursive"
+  },
+  "dependencies": {
+    "node-unzip-2": "^0.2.1",
+    "async": "^2.0.1",
+    "xml-stream": "^0.4.5",
+    "lodash": "^4.15.0",
+    "crypto": "^0.0.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-nodemon": "^2.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.10.2",
+    "sinon": "^1.17.5",
+    "sinon-chai": "^2.8.0",
+    "zombie": "^4.2.1"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "app",
+      "data-cover-never": "node_modules"
+    }
+  }
+}
