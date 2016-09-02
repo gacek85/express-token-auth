@@ -20,7 +20,7 @@ function generateRandom (len = 10)
     const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     function doGenerateRandom (len, buffer)
     {
-        return !len ? buffer : (() => {
+        return !len ? buffer.join('') : (() => {
             return doGenerateRandom(len - 1, buffer.concat(
                  possible.charAt(Math.floor(Math.random() * possible.length))
             ));
