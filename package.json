@@ -11,6 +11,12 @@
     "authorization",
     "token"
   ],
+  "keywords": [
+    "express",
+    "middleware",
+    "authorization",
+    "token"
+  ],
   "engines": {
     "node" : ">= 6.0"
   },
