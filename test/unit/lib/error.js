@@ -1,7 +1,7 @@
 
 const 
     expect              = require('chai').expect,
-    authErrorFactory    = require('./../../lib/error.js')
+    authErrorFactory    = require('./../../../lib/error.js')
 ;
 
 describe('lib/error', () => {

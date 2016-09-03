@@ -1,9 +1,9 @@
 
 const 
     expect              = require('chai').expect,
-    path                = './../../lib/',
-    authErrorFactory    = require('./../../lib/error.js'),
-    auth                = require('./../../lib/auth.js'),
+    path                = './../../../lib/',
+    authErrorFactory    = require('./../../../lib/error.js'),
+    auth                = require('./../../../lib/auth.js'),
     requestMock         = { body : {} }
 ;
         

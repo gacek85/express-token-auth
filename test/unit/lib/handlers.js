@@ -1,9 +1,9 @@
 
 const 
     expect              = require('chai').expect,
-    authErrorFactory    = require('./../../lib/error.js'),
-    auth                = require('./../../lib/auth.js'),
-    applyHandler        = require('./../../lib/handlers.js'),
+    authErrorFactory    = require('./../../../lib/error.js'),
+    auth                = require('./../../../lib/auth.js'),
+    applyHandler        = require('./../../../lib/handlers.js'),
     crypto              = require('crypto')
 ;
     
