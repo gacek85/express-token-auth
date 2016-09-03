@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Express JS simple, token based, authorization middleware",
   "license": "MIT",
   "name": "express-token-auth",
