@@ -13,7 +13,7 @@ const
  * 
  * @returns {Function}              The middleware function
  */
-exports = (config, errorCb) => {
+module.exports = (config, errorCb) => {
    
     // Register handlers in the auth object
     applyHandler(auth.default, config);

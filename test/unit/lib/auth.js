@@ -1,7 +1,6 @@
 
 const 
     expect              = require('chai').expect,
-    path                = './../../../lib/',
     authErrorFactory    = require('./../../../lib/error.js'),
     auth                = require('./../../../lib/auth.js'),
     requestMock         = { body : {} }
@@ -23,13 +22,15 @@ describe('lib/auth', () => {
         });
 
         it ("Should return false if registered handler throws an auth error.", () => {
+            const errors = ["Some Error Reason"];
             auth.default.resetHandlers().addHandler({
                 validate (req) {
-                    throw authErrorFactory("Some Error", ["Some Error Reason"]);
+                    throw authErrorFactory("Some Error", errors);
                 }
             });
             expect(auth.default.handlers.length).to.equal(1);
             expect(auth.default.hasAccess(requestMock)).to.equal(false);
+            expect(auth.default.getErrors()).to.include.members(errors);
         });
 
         it ("Should return true if registered handler doesn't throw an auth error.", () => {

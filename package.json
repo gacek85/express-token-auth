@@ -12,7 +12,7 @@
     "token"
   ],
   "engines": {
-    "node" : ">= 4.9"
+    "node" : ">= 6.0"
   },
   "scripts": {
     "test": "env env=test mocha --recursive"
@@ -25,7 +25,10 @@
     "chai": "^3.5.0",
     "mocha": "^3.0.2",
     "sinon": "^1.17.5",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "express": "^4.14.0",
+    "body-parser": "^1.15.2",
+    "request": "^2.74.0"
   },
   "config": {
     "blanket": {
