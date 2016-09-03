@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "description": "Express JS simple, token based, authorization middleware",
   "license": "MIT",
-  "name": "auth-token",
+  "name": "express-token-auth",
   "repository": "gacek85/express-token-auth",
   "private": false,
   "tags": [
