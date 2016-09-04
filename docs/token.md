@@ -26,7 +26,7 @@ app.use(parser.urlEncoded({
 });
 
 app.use(auth({
-	name : 'token',
+	name : 'token',     // This parameter now can be ommitted
     token: 'this-is-some-token-value'
 }, handleUnauthorized));
 

@@ -60,11 +60,24 @@ describe('lib/handlers', () => {
     
     describe("handlers.secret.validate", () => {
         
-        it ("Should allow valid requests containing correctly calculated tokens.", () => {
+        it ("Should allow valid requests containing correctly calculated tokens for config with name parameter.", () => {
             const {seed, secret, token} = generateMockData();
             
             applyHandler(auth.default, {
                 name : 'secret',
+                secret
+            });
+            
+            expect(auth.default.handlers.length).to.equal(1);
+            expect(auth.default.hasAccess({
+                body : { token, seed }
+            })).to.equal(true);
+        });
+
+        it ("Should allow valid requests containing correctly calculated tokens for config without name parameter.", () => {
+            const {seed, secret, token} = generateMockData();
+            
+            applyHandler(auth.default, {
                 secret
             });
             
@@ -124,10 +137,22 @@ describe('lib/handlers', () => {
     
     describe("handlers.token.validate", () => {
         
-        it ("Should allow valid requests containing correct, matching tokens.", () => {
+        it ("Should allow valid requests containing correct, matching tokens for config with name parameter.", () => {
             const token = generateRandom(10);
             applyHandler(auth.default, { 
                 name : 'token',
+                token 
+            });
+            
+            expect(auth.default.handlers.length).to.equal(1);
+            expect(auth.default.hasAccess({
+                body : { token }
+            })).to.equal(true);
+        });
+
+        it ("Should allow valid requests containing correct, matching tokens for config without name parameter.", () => {
+            const token = generateRandom(10);
+            applyHandler(auth.default, { 
                 token 
             });
             

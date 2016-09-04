@@ -29,7 +29,7 @@ app.use(parser.urlEncoded({
 });
 
 app.use(auth({
-	name : 'secret',
+	name : 'secret',        // This parameter now can be ommitted
     secret: 'this-is-some-secret-value'
 }, handleUnauthorized));
 
@@ -43,7 +43,7 @@ app.use(auth({
 ``` php
 <?php
 
-function generateRandomSeed ($length = 10): string
+function generateRandomSeed (int $length = 10): string
 {
     $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
     $charactersLength = mb_strlen($characters);
@@ -51,7 +51,7 @@ function generateRandomSeed ($length = 10): string
     for ($i = 0; $i < $length; $i++) {
         $randomStringArr[] = $characters[mt_rand(0, $charactersLength - 1)];
     }
-    return join('', $randomStringArr);
+    return implode('', $randomStringArr);
 }
 
 $secret = "this-is-some-secret-value";     // Same secret as in the config file
